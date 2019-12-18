@@ -56,15 +56,23 @@ const Header = (props) => {
                     {props.namauser}
                   </DropdownToggle>
                   <DropdownMenu right>
-                    <Link to={'/cart'}>
+                    {props.role==='user'?
+                      <div>
+                        <Link to={'/cart'}>
+                          <DropdownItem>
+                            Pesanan
+                          </DropdownItem>
+                        </Link>
+                        <Link to={'/history'}>
+                          <DropdownItem>
+                            History
+                          </DropdownItem>
+                        </Link>
+                      </div>
+                    :null}
+                    <Link to={'/ubahpass'}>
                       <DropdownItem>
-                        Pesanan
-                      </DropdownItem>
-                    </Link>
-                    <DropdownItem divider />
-                    <Link to={'/history'}>
-                      <DropdownItem>
-                        History
+                        Ubah password
                       </DropdownItem>
                     </Link>
                     {props.role==='admin'?
@@ -74,7 +82,7 @@ const Header = (props) => {
                           Manage Movie 
                         </DropdownItem>
                       </Link>
-                      <Link to={'/admin'}>
+                      <Link to={'/studio'}>
                         <DropdownItem>
                           Manage Studio
                         </DropdownItem>
@@ -83,12 +91,16 @@ const Header = (props) => {
                     :null}
                   </DropdownMenu>
                 </UncontrolledDropdown>
-                <NavItem className='pt-1'>
-                  <Link to={'/cart'}><IoIosCart color='whitesmoke' className='mt-2 ml-1' style={{fontSize:20}} /> </Link>
-                </NavItem>
-                <NavItem className='pt-2 pl-2 txt-putih'>
-                  {props.jumlahcart}
-                </NavItem>
+                {props.role==='user'?
+                  <div className='d-flex'>
+                    <NavItem className='pt-1'>
+                      <Link to={'/cart'}><IoIosCart color='whitesmoke' className='mt-2 ml-1' style={{fontSize:20}} /> </Link>
+                    </NavItem>
+                    <NavItem className='pt-2 pl-2 txt-putih'>
+                      {props.jumlahcart}
+                    </NavItem>
+                  </div>
+                :null}
               </NavItem>
             }
           </Nav>

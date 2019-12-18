@@ -227,6 +227,14 @@ class Admin extends Component {
         })
     }
 
+    renderstudio=()=>{
+        return this.state.datastudio.map(val=>{
+            return(
+                <option value='1'>{val.nama}</option>
+            )
+        })
+    }
+
     render() { 
         const {datafilm,indexedit}=this.state
         const {length}=datafilm
@@ -252,9 +260,7 @@ class Admin extends Component {
                             </div>
                             <input type='text' ref='trailer' placeholder='trailer' className='mb-1 form-control' />
                             <select ref='studioId' className='from-control mt-1 mb-2'>
-                                <option value='1'>Studio 1</option>
-                                <option value='2'>Studio 2</option>
-                                <option value='3'>Studio 3</option>
+                                {this.renderstudio()}
                             </select>
                             <input type='text' ref='sutradara' placeholder='sutradara' className='mb-1 form-control' />
                             <input type='text' ref='genre' placeholder='genre' className='mb-1 form-control' />
@@ -280,9 +286,7 @@ class Admin extends Component {
                             </div>
                             <input type='text' defaultValue={datafilm[indexedit].trailer} ref='edittrailer' placeholder='trailer' className='mb-1 form-control' />
                             <select ref='editstudioId' className='from-control mt-2'>
-                                <option value='1'>Studio 1</option>
-                                <option value='2'>Studio 2</option>
-                                <option value='3'>Studio 3</option>
+                                {this.renderstudio()}
                             </select>
                             <input type='text' defaultValue={datafilm[indexedit].sutradara} ref='editsutradara' placeholder='sutradara' className='mb-1 form-control' />
                             <input type='text' defaultValue={datafilm[indexedit].genre} ref='editgenre' placeholder='genre' className='mb-1 form-control' />

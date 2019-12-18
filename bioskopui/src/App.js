@@ -15,6 +15,8 @@ import Ticket from './pages/belitiket'
 import Register from './pages/register'
 import Cart from './pages/cart'
 import History from './pages/history'
+import Studio from './pages/studio'
+import Ubahpass from './pages/ubahpass'
 // import {} from './pages/tabel'
 // import Display from './components/slider'
 
@@ -63,6 +65,8 @@ class App extends React.Component {
           <Route path={'/register'} exact component={Register} />
           <Route path={'/cart'} exact component={Cart} />
           <Route path={'/history'} exact component={History} />
+          <Route path={'/studio'} exact component={Studio} />
+          <Route path={'/ubahpass'} exact component={Ubahpass} />
         </Switch>
         {/* <Display/> */}
       </div>

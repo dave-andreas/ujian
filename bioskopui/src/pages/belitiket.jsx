@@ -31,23 +31,27 @@ class Ticket extends Component {
         var movieId=this.props.location.state.id
         Axios.get(`${APIURL}studios/${studioId}`)//ambil data studio yg memutar film yang dipilih ....(res1)
         .then(res1=>{
-            // console.log(res1)
+            console.log(res1.data)
             Axios.get(`${APIURL}orders?movieId=${movieId}&jadwal=${this.state.jam}`)//ambil data orderan apa aja yang memilih film dan jam tersebut ....(res2)
             .then(res2=>{
-                // console.log(res2)
+                console.log(res2.data)
                 var arrAxios=[]
                 res2.data.forEach(val=>{
                     arrAxios.push(Axios.get(`${APIURL}ordersDetails?orderId=${val.id}`))
+                    // Axios.get(`${APIURL}ordersDetails?orderId=${val.id}`)
+                    // .then(res=>{
+                    //     arrAxios.push(res.data)
+                    // })
                 })
-                // console.log(arrAxios)//mengubah jadi promise biar alur jadi sinkronus
+                console.log(arrAxios)//mengubah jadi promise biar alur jadi sinkronus
                 var arrAxios2=[]
                 Axios.all(arrAxios)//lup dalam axios pakai .all
                 .then(res3=>{
-                    // console.log(res3)
+                    console.log(res3)
                     res3.forEach(val=>{
                         arrAxios2.push(...val.data)
                     })
-                    // console.log(arrAxios2)
+                    console.log(arrAxios2)
                     this.setState({
                         dataMovie:this.props.location.state,
                         kursi:res1.data.kursi,
@@ -74,7 +78,7 @@ class Ticket extends Component {
         // console.log(this.state.kursi)
         for(let i=0;i<this.state.baris;i++){
             arr.push([])
-            for(let j=0;j<this.state.kursi/20;j++){
+            for(let j=0;j<20;j++){
                 arr[i].push(1)
             }
         }
@@ -216,6 +220,7 @@ class Ticket extends Component {
                 // console.log(this.state.redirHome)
                 return <Redirect to={'/'}/>
             }
+            if(this.props.role==='user'){
             return (
                 <div className='txt-putih'>
                     <Modal isOpen={this.state.modalCart} toggle={()=>this.setState({modalada:false,redirHome:true})}>
@@ -254,13 +259,13 @@ class Ticket extends Component {
                     </div>
                 </div>
             );
-        }
-        if(this.props.AuthLog){
-            return(
-                <div className='txt-putih'>
-                    PILIH MOVIE DULU
-                </div>
-            )    
+            }else{
+                return(
+                    <div className='txt-putih'>
+                        404 not found
+                    </div>
+                )
+            }
         }
         return(
             <div className='txt-putih'>
@@ -274,7 +279,8 @@ class Ticket extends Component {
 const MapstateToprops=(state)=>{
     return{
         AuthLog:state.Auth.login,
-        userId:state.Auth.id
+        userId:state.Auth.id,
+        role:state.Auth.role
     }
 }
 export default connect(MapstateToprops) (Ticket);

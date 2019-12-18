@@ -23,23 +23,34 @@
       "password": "hujan",
       "role": "user",
       "id": 4
+    },
+    {
+      "username": "andreas",
+      "password": "234",
+      "role": "user",
+      "id": 5
     }
   ],
   "studios": [
     {
-      "id": 1,
       "nama": "Studio 1",
-      "kursi": 260
+      "kursi": "300",
+      "id": 1
     },
     {
-      "id": 2,
       "nama": "Studio 2",
-      "kursi": 240
+      "kursi": "280",
+      "id": 2
     },
     {
-      "id": 3,
       "nama": "Studio 3",
-      "kursi": 200
+      "kursi": "220",
+      "id": 3
+    },
+    {
+      "nama": "Studio 4",
+      "kursi": "240",
+      "id": 4
     }
   ],
   "movies": [

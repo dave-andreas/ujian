@@ -95,12 +95,15 @@ class Home extends Component {
                         {this.state.modal.sinopsis}
                     </ModalBody>
                     <ModalFooter>
-                        <button className='btn btn-primary' onClick={()=>this.setState({modalAuth:true,belitiket:true})}>Get Ticket</button>
+                        {this.props.role==='user'?
+                            <button className='btn btn-primary' onClick={()=>this.setState({modalAuth:true,belitiket:true})}>Get Ticket</button>
+                        :null}
                     </ModalFooter>
                 </Modal>
                 <Modal isOpen={this.state.modalAuth} toggle={()=>this.setState({modalAuth:false})} zIndex='1000'>
                     <ModalBody>Anda belum Log-in, silahkan Login dulu</ModalBody>
                     <ModalFooter>
+                        
                         <Link to={'/login'}>
                             <button className='btn btn-primary'>Log-in</button>
                         </Link>
@@ -114,7 +117,8 @@ class Home extends Component {
 
 const MapstateToprops=(state)=>{
     return{
-        AuthLog:state.Auth.login
+        AuthLog:state.Auth.login,
+        role:state.Auth.role
     }
 }
 export default connect(MapstateToprops) (Home);

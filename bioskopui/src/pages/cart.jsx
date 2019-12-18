@@ -134,6 +134,9 @@ class Cart extends Component {
 
     render() {
         // console.log(this.props.AuthId)
+        if(this.props.role==='user'){
+
+        
         if(this.props.AuthId){
             // console.log('render1')
             return (  
@@ -223,6 +226,7 @@ class Cart extends Component {
                 </div>
             );
         }
+        }
         // console.log('render2')
         return(<div className='txt-putih'>404 not found</div>)
     }
@@ -233,7 +237,8 @@ const MapstateToprops=(state)=>{
     return{
         AuthUsername:state.Auth.username,
         AuthLog:state.Auth.login,
-        AuthId:state.Auth.id
+        AuthId:state.Auth.id,
+        role:state.Auth.role
     }
 }
 
