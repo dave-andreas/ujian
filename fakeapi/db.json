@@ -1,0 +1,501 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "123",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "username": "dobleh",
+      "password": "qwe",
+      "role": "user"
+    },
+    {
+      "id": 3,
+      "username": "david",
+      "password": "234",
+      "role": "admin"
+    },
+    {
+      "username": "besok",
+      "password": "hujan",
+      "role": "user",
+      "id": 4
+    }
+  ],
+  "studios": [
+    {
+      "id": 1,
+      "nama": "Studio 1",
+      "kursi": 260
+    },
+    {
+      "id": 2,
+      "nama": "Studio 2",
+      "kursi": 240
+    },
+    {
+      "id": 3,
+      "nama": "Studio 3",
+      "kursi": 200
+    }
+  ],
+  "movies": [
+    {
+      "id": 1,
+      "title": "Jumanji: The Next Level",
+      "sutradara": "Jake Kasdan",
+      "sinopsis": "Dwayne Johnson, Karen Gillan, Jack Black dan Kevin Hart kembali ke Jumanji, keempatnya harus menyelamatkan salah satu teman mereka. Namun permainan telah berubah. Para pemain kini harus lebih berani melintasi rintangan ekstrem dan kembali dengan selamat dari permainan paling berbahaya di dunia.",
+      "image": "https://media.21cineplex.com/webcontent/gallery/pictures/157422945871583_287x421.jpg",
+      "genre": "Action",
+      "produksi": "Columbia Pictures",
+      "jadwal": [
+        12,
+        14,
+        18
+      ],
+      "durasi": 121,
+      "trailer": "https://www.youtube.com/embed/rBxcF-r9Ibs",
+      "studioId": 1
+    },
+    {
+      "title": "Knives Out",
+      "sutradara": "Rian Johnson",
+      "sinopsis": "Harlan Thrombey (Christopher Plummer) adalah penulis novel misteri yang kaya raya. Di ulang tahunnya yang ke-85 ia tewas secara misterius. Keluarga Harlan yang datang berkumpul kini menjadi tersangka. Mereka dicurigai oleh Detektif terkenal Benoit Blanc (Daniel Craig) yang datang untuk menyelidiki insiden ini. Untuk memecahkan misteri kematian Harlan, sang detektif mulai berbicara kepada seluruh anggota keluarga dan menemukan siapa dalang pembunuhan sang novelis terkenal itu.",
+      "image": "https://media.21cineplex.com/webcontent/gallery/pictures/157251774892294_287x421.jpg",
+      "genre": "Comedy",
+      "produksi": "Mongrel Media",
+      "jadwal": [
+        12,
+        14,
+        16
+      ],
+      "durasi": "130",
+      "trailer": "https://www.youtube.com/embed/qGqiHJTsRkQ",
+      "studioId": "2",
+      "id": 2
+    },
+    {
+      "title": "The Good Liar",
+      "sutradara": "Bill Condon",
+      "sinopsis": "Berawal dari perkenalan di situs kencan daring, Roy (Ian McKellen) seorang penipu ulung berhasil mendekati Betty, janda kaya raya dengan harta melimpah. Tapi hubungan keduanya mendapat respon keras dari keluarga Betty, yang menduga Roy punya niat jahat. Saat memulai misinya ternyata Roy justru jatuh cinta kepada Betty. Roy yang awalnya bisa menjalankan misinya dengan mudah, justru harus melalui melewati jalan yang bisa membahayakan dirinya.",
+      "image": "https://media.21cineplex.com/webcontent/gallery/pictures/157423720057093_287x421.jpg",
+      "genre": "Drama",
+      "produksi": "Warner Bros. Pictures",
+      "jadwal": [
+        12,
+        14,
+        16,
+        18
+      ],
+      "durasi": "108",
+      "trailer": "https://www.youtube.com/embed/ljKzFGpPHhw",
+      "studioId": "3",
+      "id": 3
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "userId": 2,
+      "movieId": 3,
+      "jadwal": 12,
+      "totalHarga": 50000,
+      "bayar": false
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "movieId": 3,
+      "jadwal": 14,
+      "totalHarga": 50000,
+      "bayar": false
+    },
+    {
+      "userId": 3,
+      "movieId": 3,
+      "jadwal": 12,
+      "totalHarga": 75000,
+      "bayar": true,
+      "id": 4
+    },
+    {
+      "userId": 3,
+      "movieId": 2,
+      "jadwal": 12,
+      "totalHarga": 50000,
+      "bayar": true,
+      "id": 5
+    },
+    {
+      "userId": 2,
+      "movieId": 2,
+      "jadwal": 12,
+      "totalHarga": 50000,
+      "bayar": false,
+      "id": 6
+    },
+    {
+      "userId": 2,
+      "movieId": 1,
+      "jadwal": 12,
+      "totalHarga": 50000,
+      "bayar": false,
+      "id": 7
+    },
+    {
+      "userId": 2,
+      "movieId": 1,
+      "jadwal": 18,
+      "totalHarga": 50000,
+      "bayar": false,
+      "id": 8
+    },
+    {
+      "userId": 3,
+      "movieId": 2,
+      "jadwal": 14,
+      "totalHarga": 50000,
+      "bayar": true,
+      "id": 9
+    },
+    {
+      "userId": 4,
+      "movieId": 2,
+      "jadwal": 12,
+      "totalHarga": 50000,
+      "bayar": false,
+      "id": 16
+    },
+    {
+      "userId": 4,
+      "movieId": 3,
+      "jadwal": 12,
+      "totalHarga": 50000,
+      "bayar": false,
+      "id": 17
+    },
+    {
+      "userId": 4,
+      "movieId": 1,
+      "jadwal": 12,
+      "totalHarga": 50000,
+      "bayar": false,
+      "id": 18
+    },
+    {
+      "userId": 1,
+      "movieId": 1,
+      "jadwal": 12,
+      "totalHarga": 50000,
+      "bayar": true,
+      "id": 19
+    },
+    {
+      "userId": 3,
+      "movieId": 1,
+      "jadwal": 12,
+      "totalHarga": 50000,
+      "bayar": true,
+      "id": 20
+    },
+    {
+      "userId": 3,
+      "movieId": 2,
+      "jadwal": 12,
+      "totalHarga": 50000,
+      "bayar": true,
+      "id": 21
+    },
+    {
+      "userId": 3,
+      "movieId": 1,
+      "jadwal": 12,
+      "totalHarga": 50000,
+      "bayar": true,
+      "id": 22
+    },
+    {
+      "userId": 3,
+      "movieId": 1,
+      "jadwal": 12,
+      "totalHarga": 100000,
+      "bayar": true,
+      "id": 23
+    },
+    {
+      "userId": 1,
+      "movieId": 2,
+      "jadwal": 12,
+      "totalHarga": 50000,
+      "bayar": true,
+      "id": 24
+    },
+    {
+      "userId": 1,
+      "movieId": 3,
+      "jadwal": 12,
+      "totalHarga": 50000,
+      "bayar": true,
+      "id": 25
+    },
+    {
+      "userId": 1,
+      "movieId": 1,
+      "jadwal": 12,
+      "totalHarga": 50000,
+      "bayar": true,
+      "id": 26
+    }
+  ],
+  "ordersDetails": [
+    {
+      "id": 1,
+      "orderId": 1,
+      "row": 2,
+      "seat": 4
+    },
+    {
+      "id": 2,
+      "orderId": 1,
+      "row": 2,
+      "seat": 5
+    },
+    {
+      "id": 5,
+      "orderId": 3,
+      "row": 2,
+      "seat": 8
+    },
+    {
+      "id": 6,
+      "orderId": 3,
+      "row": 2,
+      "seat": 9
+    },
+    {
+      "orderId": 4,
+      "seat": 3,
+      "row": 3,
+      "id": 7
+    },
+    {
+      "orderId": 4,
+      "seat": 4,
+      "row": 3,
+      "id": 8
+    },
+    {
+      "orderId": 4,
+      "seat": 5,
+      "row": 3,
+      "id": 9
+    },
+    {
+      "orderId": 5,
+      "seat": 6,
+      "row": 3,
+      "id": 10
+    },
+    {
+      "orderId": 5,
+      "seat": 7,
+      "row": 3,
+      "id": 11
+    },
+    {
+      "orderId": 6,
+      "seat": 3,
+      "row": 4,
+      "id": 12
+    },
+    {
+      "orderId": 6,
+      "seat": 4,
+      "row": 4,
+      "id": 13
+    },
+    {
+      "orderId": 7,
+      "seat": 6,
+      "row": 2,
+      "id": 14
+    },
+    {
+      "orderId": 7,
+      "seat": 7,
+      "row": 2,
+      "id": 15
+    },
+    {
+      "orderId": 8,
+      "seat": 9,
+      "row": 5,
+      "id": 16
+    },
+    {
+      "orderId": 8,
+      "seat": 10,
+      "row": 5,
+      "id": 17
+    },
+    {
+      "orderId": 9,
+      "seat": 5,
+      "row": 2,
+      "id": 18
+    },
+    {
+      "orderId": 9,
+      "seat": 6,
+      "row": 2,
+      "id": 19
+    },
+    {
+      "orderId": 16,
+      "seat": 5,
+      "row": 6,
+      "id": 31
+    },
+    {
+      "orderId": 16,
+      "seat": 6,
+      "row": 6,
+      "id": 32
+    },
+    {
+      "orderId": 17,
+      "seat": 5,
+      "row": 6,
+      "id": 33
+    },
+    {
+      "orderId": 17,
+      "seat": 4,
+      "row": 6,
+      "id": 34
+    },
+    {
+      "orderId": 18,
+      "seat": 7,
+      "row": 4,
+      "id": 35
+    },
+    {
+      "orderId": 18,
+      "seat": 6,
+      "row": 4,
+      "id": 36
+    },
+    {
+      "orderId": 19,
+      "seat": 6,
+      "row": 12,
+      "id": 37
+    },
+    {
+      "orderId": 19,
+      "seat": 7,
+      "row": 12,
+      "id": 38
+    },
+    {
+      "orderId": 20,
+      "seat": 9,
+      "row": 6,
+      "id": 39
+    },
+    {
+      "orderId": 20,
+      "seat": 8,
+      "row": 6,
+      "id": 40
+    },
+    {
+      "orderId": 21,
+      "seat": 7,
+      "row": 8,
+      "id": 41
+    },
+    {
+      "orderId": 21,
+      "seat": 8,
+      "row": 8,
+      "id": 42
+    },
+    {
+      "orderId": 22,
+      "seat": 3,
+      "row": 3,
+      "id": 43
+    },
+    {
+      "orderId": 22,
+      "seat": 2,
+      "row": 3,
+      "id": 44
+    },
+    {
+      "orderId": 23,
+      "seat": 6,
+      "row": 8,
+      "id": 45
+    },
+    {
+      "orderId": 23,
+      "seat": 8,
+      "row": 8,
+      "id": 46
+    },
+    {
+      "orderId": 23,
+      "seat": 5,
+      "row": 8,
+      "id": 47
+    },
+    {
+      "orderId": 23,
+      "seat": 7,
+      "row": 8,
+      "id": 48
+    },
+    {
+      "orderId": 24,
+      "seat": 4,
+      "row": 2,
+      "id": 49
+    },
+    {
+      "orderId": 24,
+      "seat": 5,
+      "row": 2,
+      "id": 50
+    },
+    {
+      "orderId": 25,
+      "seat": 6,
+      "row": 5,
+      "id": 51
+    },
+    {
+      "orderId": 25,
+      "seat": 7,
+      "row": 5,
+      "id": 52
+    },
+    {
+      "orderId": 26,
+      "seat": 0,
+      "row": 8,
+      "id": 53
+    },
+    {
+      "orderId": 26,
+      "seat": 1,
+      "row": 8,
+      "id": 54
+    }
+  ]
+}
